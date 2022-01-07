@@ -18,8 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - poetry >=1.0.10
-    - poetry-core
+    - flit-core
     - python >=3.6
 
   run:
