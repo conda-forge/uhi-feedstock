@@ -1,11 +1,11 @@
-About uhi
-=========
+About uhi-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uhi-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Scikit-HEP/uhi
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uhi-feedstock/blob/main/LICENSE.txt)
 
 Summary: Unified Histogram Interface: tools to help library authors work with histograms
 

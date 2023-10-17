@@ -1,5 +1,5 @@
 {% set name = "uhi" %}
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/uhi-{{ version }}.tar.gz
-  sha256: 800caf3a5f1273b08bcc3bb4b49228fe003942e23423812b0110546aad9a24be
+  sha256: 0dcb6b19775087d38a31ee388cb2c70f2ecfe04c4ffe2ca63223410cae5beefa
 
 build:
   number: 0
