@@ -18,15 +18,15 @@ build:
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
-    - python {{ python_min }}
 
   run:
     - python >={{ python_min }}
     - numpy >=1.13.3
-    - fastjsonschema
+    - python-fastjsonschema
 
 test:
   source_files:
