@@ -26,8 +26,6 @@ requirements:
   run:
     - numpy >=1.13.3
     - python >={{ python_min }}
-    # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
-    - typing_extensions >=3.7
 
 test:
   source_files:
