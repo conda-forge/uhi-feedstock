@@ -24,8 +24,9 @@ requirements:
     - python {{ python_min }}
 
   run:
-    - numpy >=1.13.3
     - python >={{ python_min }}
+    - numpy >=1.13.3
+    - fastjsonschema
 
 test:
   source_files:
