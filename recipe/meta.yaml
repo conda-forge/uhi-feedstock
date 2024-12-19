@@ -27,6 +27,9 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.13.3
     - python-fastjsonschema
+    # TODO: Drop after python_min is 3.9
+    # c.f. https://github.com/scikit-hep/uhi/blob/3284e73c531c918306ee03dacbb19fb42d8fdf2b/pyproject.toml#L48
+    - importlib-resources
 
 test:
   source_files:
