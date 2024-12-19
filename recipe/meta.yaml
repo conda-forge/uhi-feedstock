@@ -1,5 +1,6 @@
 {% set name = "uhi" %}
 {% set version = "0.4.0" %}
+{% set python_min = "3.7" %}
 
 
 package:
@@ -7,11 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/uhi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uhi-{{ version }}.tar.gz
   sha256: 0dcb6b19775087d38a31ee388cb2c70f2ecfe04c4ffe2ca63223410cae5beefa
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -20,11 +21,11 @@ requirements:
     - pip
     - hatchling
     - hatch-vcs
-    - python >=3.6
+    - python {{ python_min }}
 
   run:
     - numpy >=1.13.3
-    - python >=3.6
+    - python >={{ python_min }}
     # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
     - typing_extensions >=3.7
 
@@ -38,6 +39,7 @@ test:
     - pip check
     - pytest .
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - importlib_metadata
