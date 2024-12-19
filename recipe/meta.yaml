@@ -1,6 +1,6 @@
 {% set name = "uhi" %}
-{% set version = "0.4.0" %}
-{% set python_min = "3.7" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -9,25 +9,27 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uhi-{{ version }}.tar.gz
-  sha256: 0dcb6b19775087d38a31ee388cb2c70f2ecfe04c4ffe2ca63223410cae5beefa
+  sha256: 9559bbf2f38f18a2fc1d8f73139396068f88f898d6a9afc833207ec0fd59a31c
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
-    - python {{ python_min }}
 
   run:
-    - numpy >=1.13.3
     - python >={{ python_min }}
-    # Actually only required for [py<38] but require for all Python versions so this can be noarch: python
-    - typing_extensions >=3.7
+    - numpy >=1.13.3
+    - python-fastjsonschema
+    # TODO: Drop after python_min is 3.9
+    # c.f. https://github.com/scikit-hep/uhi/blob/3284e73c531c918306ee03dacbb19fb42d8fdf2b/pyproject.toml#L48
+    - importlib-resources
 
 test:
   source_files:
