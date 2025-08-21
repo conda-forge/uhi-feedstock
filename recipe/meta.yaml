@@ -1,6 +1,6 @@
 {% set name = "uhi" %}
-{% set version = "0.5.0" %}
-{% set python_min = "3.8" %}
+{% set version = "1.0.0" %}
+{% set python_min = "3.9" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uhi-{{ version }}.tar.gz
-  sha256: 9559bbf2f38f18a2fc1d8f73139396068f88f898d6a9afc833207ec0fd59a31c
+  sha256: 331188949b1a49c8db9ef9d50b7c4d4df4606115d147ded97c4f050da8270e74
 
 build:
   number: 0
@@ -27,8 +27,7 @@ requirements:
     - python >={{ python_min }}
     - numpy >=1.13.3
     - python-fastjsonschema
-    # TODO: Drop after python_min is 3.9
-    # c.f. https://github.com/scikit-hep/uhi/blob/3284e73c531c918306ee03dacbb19fb42d8fdf2b/pyproject.toml#L48
+    # TODO: Drop after python_min is 3.11
     - importlib-resources
 
 test:
@@ -46,6 +45,8 @@ test:
     - pytest
     - importlib_metadata
     - boost-histogram
+    - hist
+    - h5py
 
 about:
   home: https://github.com/Scikit-HEP/uhi
