@@ -29,7 +29,7 @@ requirements:
     - numpy >=1.13.3
     - python-fastjsonschema
     # TODO: Drop after python_min is 3.11
-    - importlib-resources
+    - typing_extensions
 
 tests:
   - python:
