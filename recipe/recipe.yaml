@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: uhi
-  version: "1.1.1"
+  version: "1.2.0"
   python_min: "3.10"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uhi-${{ version }}.tar.gz
-  sha256: d39c4dc162d691bcb443529a9cf5fe99b11e14a387cdf8284154cc25870d2ff0
+  sha256: 3c292bf7884a7c3f35e687e92dc756407e575d19c15c9f99c8197a16fb6708c2
 
 build:
   number: 0
